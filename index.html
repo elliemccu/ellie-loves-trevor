@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ellie Loves Trevor</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    background: linear-gradient(135deg,#ffc0cb,#add8e6);
+    text-align:center;
+}
+
+/* START SCREEN */
+#startScreen{
+    position:absolute;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+#startScreen button{
+    font-size:24px;
+    padding:15px 30px;
+    border:none;
+    border-radius:10px;
+    background:#ff9ecb;
+    color:white;
+    cursor:pointer;
+}
+
+/* GAME UI */
+#gameUI{
+    display:none;
+    margin-top:20px;
+}
+
+canvas{
+    background:white;
+    border-radius:10px;
+}
+
+#topBar{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-bottom:10px;
+    font-size:20px;
+}
+
+</style>
+
+</head>
+<body>
+
+
+<!-- START SCREEN -->
+<div id="startScreen">
+
+    <h1>Ellie Loves Trevor</h1>
+
+    <p>High Score: <span id="highScore">0</span></p>
+
+    <!-- THIS BUTTON STARTS GAME -->
+    <button onclick="startGame()">Start Game</button>
+
+</div>
+
+
+<!-- GAME UI -->
+<div id="gameUI">
+
+    <div id="topBar">
+        <div>Score: <span id="score">0</span></div>
+
+        <div>
+            Next:
+            <canvas id="previewCanvas" width="80" height="80"></canvas>
+        </div>
+    </div>
+
+    <canvas id="gameCanvas" width="400" height="600"></canvas>
+
+</div>
+
+
+<!-- SCRIPT -->
+<script src="script.js"></script>
+
+</body>
+</html>
